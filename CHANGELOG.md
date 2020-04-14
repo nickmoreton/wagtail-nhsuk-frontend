@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v0.4.3 
+
+- Rename the label for the Don't list in the admin panel
+
 ## v0.4.2 
 
 - Use the latest version of the NHS.UK frontend library ([v3.0.4](https://github.com/nhsuk/nhsuk-frontend/blob/master/CHANGELOG.md#304---24-march-2020))
