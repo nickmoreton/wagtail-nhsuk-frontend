@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+
+{% block body_class %}template-formpage{% endblock %}
+
+{% block main %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <h1>{{ page.title }}</h1>
+        {{ page.intro|richtext }}
+        <form action="{% pageurl page %}" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit">
+        </form>
+        {% include "wagtailnhsukfrontend/back_link.html" with url="/" label="Go to homepage" %}
+    </div>
+</div>
+{% endblock %}

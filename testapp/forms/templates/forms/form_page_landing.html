@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+
+{% block body_class %}template-formlandingpage{% endblock %}
+
+{% block main %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      {{ page.thank_you_text|richtext }}    
+      {% include "wagtailnhsukfrontend/back_link.html" with url="/" label="Go to homepage" %}
+    </div>
+</div>
+{% endblock %}
